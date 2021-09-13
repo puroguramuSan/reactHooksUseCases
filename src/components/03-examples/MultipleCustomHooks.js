@@ -27,14 +27,14 @@ export const MultipleCustomHooks = () => {
             {
                 loading ?
                 ( 
-                    <div className="alert alert-info text-center">
+                    <div className="alert alert-info text-center" data-testid="loading-output">
                         Loading...
                     </div>
                 ) :
                 (
                     <blockquote className="blockquote text-right">
-                        <p>{ quote }</p>
-                        <footer className="blockquote-footer"> { author } </footer>
+                        <p data-testid="quote-output">{ quote }</p>
+                        <footer className="blockquote-footer" data-testid="author-output"> { author } </footer>
                     </blockquote>
                 )
             }

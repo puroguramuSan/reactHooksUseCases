@@ -22,8 +22,10 @@ export const TodoApp = () => {
 
         dispatch({
             type:'add',
-            action: newTodo
+            payload: newTodo
         });
+
+        console.log("Todos:", todos);
     }
 
     const handleDelete = ({ id }) => {
@@ -52,7 +54,7 @@ export const TodoApp = () => {
 
     return (
         <>
-            <h1>TodoApp ( {todos.length} )</h1>
+            <h1 data-testid="todos-output">TodoApp ( {todos.length} )</h1>
             <hr />
             <div className="row">
                 <div className="col-md-6">

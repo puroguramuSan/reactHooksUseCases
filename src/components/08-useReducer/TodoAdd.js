@@ -37,9 +37,11 @@ export const TodoAdd = ({ handleAdd }) => {
                             name="description"
                             placeholder="Nombre de la tarea"
                             value={description}
-                            onChange={handleInputChange}></input>
+                            onChange={handleInputChange}
+                            data-testid="user-input"></input>
                         <button type="submit"
-                            className="btn btn-outline-success mt-3 ">Agregar</button>
+                            className="btn btn-outline-success mt-3 "
+                            data-testid="send-btn">Agregar</button>
                     </form>
         </>
     )

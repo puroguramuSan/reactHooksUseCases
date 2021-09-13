@@ -41,7 +41,13 @@ export const useFetch = (url) => {
                     console.log("component unmounted");
                 }
 
-            });
+            }).catch( (err) => { 
+                setState( {
+                    data: null,
+                    loading: false,
+                    error: true
+                } );
+            } );
 
     }, [url]);
 
